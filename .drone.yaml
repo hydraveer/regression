@@ -3,8 +3,12 @@ type: docker
 name: test-pipeline
 
 trigger:
-  branch:
-    - feature
+  ref:
+    include:
+      - refs/pull/**
+      - refs/push/**
+      - refs/tags/**
+      - refs/heads/develop
 
 steps:
   - name: setup-environment
