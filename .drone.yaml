@@ -9,6 +9,7 @@ trigger:
       - refs/push/**
       - refs/tags/**
       - refs/heads/develop
+      - refs/heads/main
 
 steps:
   - name: setup-environment
